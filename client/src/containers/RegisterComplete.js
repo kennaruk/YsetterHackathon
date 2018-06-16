@@ -8,6 +8,7 @@ class RegisterComplete extends Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <BodyClassName className="registerComplete-body">
@@ -19,9 +20,9 @@ class RegisterComplete extends Component {
 
 
 
-                    <div className="register-complete-btn"> 
-                    <span className="set-center">เสร็จสิ้น</span>
-                      </div>
+                    <div className="register-complete-btn" onClick={ () => {this.props.history.push('/')} }> 
+                        <span className="set-center" >เสร็จสิ้น</span>
+                    </div>
                 </div>
 
 
