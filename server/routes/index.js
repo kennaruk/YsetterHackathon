@@ -21,6 +21,7 @@ router.get('/user', (req, res, next) => {
 });
 
 router.post('/user', (req, res, next) => {
+  console.log('req.body:', req.body)
   let user = {
     username: req.body.username,
     password: req.body.password

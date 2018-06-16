@@ -9,7 +9,14 @@ class FieldGroup extends Component {
         return (
             <div className="input-login">
                 {/* <div className="input-text">{this.props.text}</div> */}
-                <input className="input-form" type={this.props.type} placeholder={this.props.placeholder}>
+                <input 
+                    id={this.props.id}
+                    className="input-form" 
+                    type={this.props.type} 
+                    value={this.props.value}
+                    placeholder={this.props.placeholder}
+                    onChange={this.props.onChange}
+                >
 
                 </input>
 
