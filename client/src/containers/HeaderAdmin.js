@@ -5,6 +5,7 @@ import homeheader from '../img/homeheader.svg';
 import registerheader from '../img/registerheader.svg';
 import listmember from '../img/listmember.svg';
 import follow from '../img/follower.svg';
+import location from '../img/location.svg';
 // import logout from '../img/logout.svg';
 
 
@@ -39,16 +40,15 @@ class Header extends Component {
                                 <img className="img-navbar" src={homeheader} />
                             </div>
                             <div className="text-each-navbar">
-                                ข้อมูลโครงการ
+                            ภาพรวมโครงการ
                             </div>
                         </div>
                         <div className="navbar-each" onClick={() => { this.props.history.push('/laborRegisterLanding') }}>
                             <div className="img-each-navbar">
-                                <img className="img-navbar" src={registerheader} />
+                                <img className="img-navbar" src={location} />
                             </div>
                             <div className="text-each-navbar">
-                                ลงทะเบียน
-    พนักงาน
+                            แรงงานในแต่ละพื้นที่
                             </div>
                         </div>
                         <div className="navbar-each">
@@ -56,7 +56,7 @@ class Header extends Component {
                                 <img className="img-navbar" src={listmember} />
                             </div>
                             <div className="text-each-navbar">
-                                ข้อมูลพนักงานทั้งหมด
+                            ข้อมูลพนักงานทั้งหมด
                             </div>
                         </div>
                         <div className="navbar-each">

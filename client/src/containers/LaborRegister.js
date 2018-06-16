@@ -14,7 +14,7 @@ class LaborRegister extends Component {
                      </div>
 
                     <div className="choose-btn margin-top">
-                        <span className="set-center" onClick={() => { this.props.history.push('/laborRegister1') }}>ลงทะเบียน
+                        <span className="set-center" onClick={() => { this.props.history.push('/NewLabor1') }}>ลงทะเบียน
                              <br />   แรงงานใหม่</span>
                     </div>
                     <div className="choose-btn">

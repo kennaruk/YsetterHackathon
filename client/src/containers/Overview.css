@@ -45,3 +45,17 @@ body.home-body{
     font-size: 20px;
     font-weight: normal;
 }
+.detail-head-text{
+    text-align: left;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.graph-box{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    height: 200px;
+    background-color: red;
+}
