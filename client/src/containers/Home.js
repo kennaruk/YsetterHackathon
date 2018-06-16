@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './Home.css';
-import FieldGroup from '../components/FieldGroup';
-import Button from '../components/Button';
-import logo from '../img/logo.svg';
 import imgproject from '../img/imgproject.png';
 import BodyClassName from 'react-body-classname';
 
