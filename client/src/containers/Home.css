@@ -16,3 +16,9 @@ body.home-body{
     position: relative;
 
 }
+
+.set-color-number{
+    width: 100%;
+    text-align: left;
+    padding-left: 12px;
+}

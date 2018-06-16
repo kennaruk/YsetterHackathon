@@ -4,6 +4,7 @@ import Login from './Login';
 import Home from './Home';
 import LaborRegister from './LaborRegister';
 import Header from './Header';
+import Register from './Register';
 
 class Routes extends Component {
     render() {
@@ -14,6 +15,7 @@ class Routes extends Component {
                     <div className="mainClass">
                         <Route path="/" exact component={Home}/>
                         <Route path="/laborRegister" exact component={LaborRegister}/>
+                        <Route path="/register" exact component={Register}/>
                         {/* <Route path="/labor" exact component={Labor}/> */}
                         {/* <Route path="/labor" exact component={Labor}/> */}
 

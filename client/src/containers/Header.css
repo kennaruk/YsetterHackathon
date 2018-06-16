@@ -67,7 +67,31 @@ box-sizing: border-box;
     box-sizing: border-box;
 }
 
-
+.right-content-box{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    color: white;
+    
+}
+.logout-text{
+    float: right;
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+}
+.username-text{
+    float: right;
+    margin-right: 12px;
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+}
+.img-logo-logout{
+    width: 18px;
+    
+   /* padding-top: 4px; */
+}
 
  /* web */
  @media (min-width: 1024px){

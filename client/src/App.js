@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Routes from './containers/Routes';
 import Login from './containers/Login';
+import Register from './containers/Register';
 
 class App extends Component {
 
