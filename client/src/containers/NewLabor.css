@@ -26,7 +26,14 @@ body.newlabor-body{
     text-align: left;
     height: 40px;
 }
-
+.register-input-box{
+    /* height: 44px; */
+}
+.each-sun-box{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
 .container {
     display: block;
     position: relative;
@@ -62,7 +69,7 @@ body.newlabor-body{
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color:white;
+    background-color:#eee;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -98,4 +105,90 @@ body.newlabor-body{
     box-sizing: border-box;
     background-color: #2E3340;
     color: white;
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+select{
+    background-color: white;
+    border: none;
+    width: 50px;
+    padding-left: 6px;
+    font-size: 16px;
+    margin-left: 12px;
+    position: relative;
+    box-sizing: border-box;
+}
+.number-sun{
+    width: 100%;
+    height: 40px;;
+    float: left;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 1;
+    margin-bottom: 12px;
+}
+.sun-text{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    height: 30px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.register-input-labor-text{
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+   
+}
+
+#customers {
+    border-collapse: collapse;
+   width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:none;
+    color: black;
+}
+.date-vacine{
+    width: 70px;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    height: 30px;
+    border-radius: 6px;
+    padding-left: 12px;
+}
+.input-school{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: none !important;
+    box-sizing: border-box;
+}
+.other-input{
+    height: 44px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid black;
+    background-color: red;
+    margin-bottom: 48px;
 }
