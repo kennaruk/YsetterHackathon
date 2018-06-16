@@ -5,6 +5,9 @@ import Home from './Home';
 import LaborRegister from './LaborRegister';
 import Header from './Header';
 import Register from './Register';
+import NewLabor1 from './NewLabor1';
+import NewLabor2 from './NewLabor2';
+import NewLabor3 from './NewLabor3';
 
 class Routes extends Component {
     render() {
@@ -14,8 +17,11 @@ class Routes extends Component {
                 <Switch>
                     <div className="mainClass">
                         <Route path="/" exact component={Home}/>
-                        <Route path="/laborRegister" exact component={LaborRegister}/>
+                        <Route path="/laborRegisterLanding" exact component={LaborRegister}/>
                         <Route path="/register" exact component={Register}/>
+                        <Route path="/laborRegister1" exact component={NewLabor1}/>
+                        <Route path="/laborRegister2" exact component={NewLabor2}/>
+                        <Route path="/laborRegister3" exact component={NewLabor3}/>
                         {/* <Route path="/labor" exact component={Labor}/> */}
                         {/* <Route path="/labor" exact component={Labor}/> */}
 
