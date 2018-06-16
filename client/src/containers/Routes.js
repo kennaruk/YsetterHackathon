@@ -20,11 +20,11 @@ class Routes extends Component {
                 <Switch>
                     <div className="mainClass">
                         <Route path="/" exact component={Home}/>
-                        <Route path="/laborRegisterLanding" exact component={LaborRegister}/>
                         <Route path="/register" exact component={Register}/>
-                        <Route path="/laborRegister1" exact component={NewLabor1}/>
-                        <Route path="/laborRegister2" exact component={NewLabor2}/>
-                        <Route path="/laborRegister3" exact component={NewLabor3}/>
+                        <Route path="/laborRegisterLanding" exact component={LaborRegister}/>
+                        <Route path="/NewLabor1" exact component={NewLabor1}/>
+                        <Route path="/NewLabor2" exact component={NewLabor2}/>
+                        <Route path="/NewLabor3" exact component={NewLabor3}/>
                         {/* <Route path="/labor" exact component={Labor}/> */}
                         {/* <Route path="/labor" exact component={Labor}/> */}
 

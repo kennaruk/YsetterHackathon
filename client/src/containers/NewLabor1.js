@@ -7,6 +7,20 @@ import BodyClassName from 'react-body-classname';
 class NewLabor1 extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            haveFollower: true
+        }
+    }
+    onChange 
+    handleFollowerChange = (event) => {
+        if(event.target.id === "haveFollower")
+            this.setState({
+                haveFollower: true
+            });
+        else
+            this.setState({
+                haveFollower: false
+            });
     }
     render() {
         return (
@@ -35,19 +49,25 @@ class NewLabor1 extends Component {
                             <div class="header color_blue">ผู้ติดตาม </div>
                             <div class="floatleft_box">
                                 <label class="container margin_right">มี
-                                     <input type="radio" checked="checked" name="radio1" />
+                                     <input id="haveFollower" type="radio" onChange={this.handleFollowerChange} checked={this.state.haveFollower} name="radio1" />
                                     <span class="checkmark checkmark_orange"></span>
                                 </label>
                                 <label class="container">ไม่มี
-                                      <input type="radio" name="radio1" />
+                                      <input id="!haveFollower" type="radio" onChange={this.handleFollowerChange} checked={!this.state.haveFollower} name="radio1" />
                                     <span class="checkmark checkmark_orange"></span>
                                 </label>
 
                             </div>
                        
-                        <div className="next-btn">
-                           <span className="set-center">ถัดไป</span>
-                        </div>
+                        { this.state.haveFollower ? 
+                            <div className="next-btn">
+                            <span className="set-center">ถัดไป</span>
+                            </div>
+                            :
+                            <div className="next-btn">
+                            <span className="set-center">เสร็จสิ้น</span>
+                            </div>
+                        }
                     </div>
 
                 </div>
