@@ -3,11 +3,12 @@ import './Login.css';
 import FieldGroup from '../components/FieldGroup';
 import Button from '../components/Button';
 import logo from '../img/logo.svg';
+import BodyClassName from 'react-body-classname';
 
 class Login extends Component {
     render() {
         return (
-
+            <BodyClassName className="login-body">
             <div className="login-box">
                 <div className="img-logo-box">
                     <img className="img-logo" src={logo} />
@@ -29,6 +30,7 @@ class Login extends Component {
                     text="เข้าสู่ระบบ"
                 />
             </div>
+            </BodyClassName>
         )
     }
 }

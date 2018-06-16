@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import Login from './Login';
+import Home from './Home';
+import LaborRegister from './LaborRegister';
+import Header from './Header';
 
 class Routes extends Component {
     render() {
         return (
-            <Switch>
-                <div className="mainClass">
-                    <Route path="/login" exact component={Login}/>
-                </div>
-            </Switch>
+            <div>
+                <Header {...this.props} />
+                <Switch>
+                    <div className="mainClass">
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/laborRegister" exact component={LaborRegister}/>
+                        {/* <Route path="/labor" exact component={Labor}/> */}
+                        {/* <Route path="/labor" exact component={Labor}/> */}
+
+                    </div>
+                </Switch>
+            </div>
 
         )
     }
 }
-export default Routes;
+export default withRouter(Routes);
