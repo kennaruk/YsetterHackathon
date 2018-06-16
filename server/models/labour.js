@@ -7,9 +7,8 @@ var labourSchema = new Schema({
   phone_number: String,
   id_number: String,
   nationality: String,
-  type:String,
-  follower: 
-  [
+  type: String,
+  follower: [
     {
       status: {
         type: String,
@@ -21,23 +20,25 @@ var labourSchema = new Schema({
       birth_date: Date,
       nationality: String,
       vaccine: [],
-      education:{
-        thai:Boolean,
-        not_thai:Boolean,
-        other:Boolean,
-        other_string:String,
-        sansiri:Boolean,
-        not_sansiri:Boolean,
+      education: {
+        thai: Boolean,
+        not_thai: Boolean,
+        other: Boolean,
+        other_string: String,
+        sansiri: Boolean,
+        not_sansiri: Boolean
       },
-      education_history:[{
-        graduate:String,
-        school:String,
-        year:String
-      }],
-      education_current:String
+      education_history: [
+        {
+          graduate: String,
+          school: String,
+          year: String
+        }
+      ],
+      education_current: String
     }
   ],
-  Project:Sting
+  project: String
 });
 
 const Labour = mongoose.model("Labour", labourSchema);
