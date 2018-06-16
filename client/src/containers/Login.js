@@ -21,6 +21,10 @@ class Login extends Component {
         });
     }
 
+    componentDidMount() {
+
+    }
+
     handleSubmit = (event) => {
         event.preventDefault();
 
@@ -28,7 +32,6 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
         }
-
         fetch('/login', {
             method: 'post',
             headers: {
@@ -37,8 +40,10 @@ class Login extends Component {
             body: JSON.stringify(user)
         }).then(res => res.json())
         .then(res => {
-            if(res.success)
+            if(res.success) {
+                sessionStorage.setItem('name', res.data.th_first_name+" "+res.data.th_last_name);
                 this.props.hasAuthenticated(true);
+            }
             else
                 this.setState({
                     err: true
