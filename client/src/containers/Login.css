@@ -1,10 +1,12 @@
 body{
-    background: linear-gradient(#040404, #A8A7A7);
+    
+}
+body.login-body{
     margin:0px;
     padding:0px;
     width:100%;
     background: url("../img/bg.svg"); 
-    background-size:     cover;                      /* <------ */
+    background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center; 
 }

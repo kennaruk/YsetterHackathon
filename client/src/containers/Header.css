@@ -1,0 +1,99 @@
+.header-main-box{
+    width: 100%;
+    height: 160px;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background: url("../img/bgheader.svg"); 
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+.header-logo{
+    width: 20%;
+    height: calc(160px - 75px);
+    margin: 0 auto;
+    
+}
+.img-logo-header{
+    width: 100%;
+height: 100%;
+/* padding: 4px; */
+position: relative;
+box-sizing: border-box;
+}
+.navbar-box{
+    width: 100%;
+    height: 75px;
+    bottom: 0px;
+    position: absolute;
+    box-sizing: border-box;
+}
+.navbar-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.navbar-each{
+    width: calc(100% / 4);
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+}
+.img-navbar{
+width: 100%;
+height: 100%;
+/* margin: 4px; */
+position: relative;
+box-sizing: border-box;
+}
+.img-each-navbar{
+    width: 100%;
+    height: 50%;
+    padding: 3px;
+    position: relative;
+    box-sizing: border-box;
+}
+.text-each-navbar{
+    width: 100%;
+    height: 50%;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+
+ /* web */
+ @media (min-width: 1024px){
+    .navbar-container{
+        width: 50%;
+    }
+   .img-logo-header{
+    height: 80%;
+    margin-top: 4%;
+   }
+}
+
+
+ /* ipad-pro */
+ @media (max-width: 1024px) and (min-height:1366px){
+    .navbar-container{
+        width: 50%;
+    }
+  
+}
+ /* web */
+ @media (max-width: 768px) and (min-height:1024px){
+    .navbar-container{
+        width: 50%;
+    }
+    
+    
+   
+}

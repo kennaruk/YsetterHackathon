@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Login from './containers/Login';
-import Header from './containers/Header';
 import Routes from './containers/Routes';
+import Login from './containers/Login';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      isAuthenticated: true
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        {/* <Header /> */}
-        <Routes />
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
+        {this.state.isAuthenticated ? <Routes/> : <Login/>}
       </div>
     );
   }
