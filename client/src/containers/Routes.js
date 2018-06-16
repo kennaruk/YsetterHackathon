@@ -23,6 +23,7 @@ class Routes extends Component {
                     <div className="mainClass">
                         <Route path="/" exact component={Home}/>
                         <Route path="/register" exact component={Register}/>
+                        <Route path="/laborRegisterLanding" exact component={LaborRegister}/>
                         <Route path="/NewLabor1" exact component={NewLabor1}/>
                         <Route path="/NewLabor2" exact component={NewLabor2}/>
                         <Route path="/NewLabor3" exact component={NewLabor3}/>
