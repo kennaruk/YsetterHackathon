@@ -107,9 +107,14 @@ router.get('/user', (req, res, next) => {
 router.post('/user', (req, res, next) => {
   console.log('req.body:', req.body)
   let user = {
-    username: req.body.username,
-    password: req.body.password
+    th_first_name:  req.body.th_first_name,
+    th_last_name:    req.body.th_last_name,
+    en_first_name:  req.body.en_first_name,
+    en_last_name:   req.body.en_last_name,
+    username:       req.body.username,
+    password:       req.body.password
   };
+
   Controllers.user.addUserByUsernamePassword(user, (err, user) => {
     if(err)
       res.json({
@@ -129,7 +134,7 @@ router.post('/login', (req, res, next) => {
     username: req.body.username,
     password: req.body.password
   };
-  Controllers.user.loginByUsernamePassword(user, (err, success) => {
+  Controllers.user.loginByUsernamePassword(user, (err, user) => {
     if(err)
       res.json({
         success: false,
@@ -137,7 +142,8 @@ router.post('/login', (req, res, next) => {
       });
     else
       res.json({
-        success: success,
+        success: true,
+        data: user
       });
   });
 });

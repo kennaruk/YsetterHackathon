@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import './Header.css'
 import logo2 from '../img/logo2.svg';
-import logout from '../img/logout.svg';
 import homeheader from '../img/homeheader.svg';
 import registerheader from '../img/registerheader.svg';
 import listmember from '../img/listmember.svg';
-// import logout from '../img/logout.svg';
 
 
 class Header extends Component {
     constructor(props) {
         super(props);
     }
+    
+    componentDidMount() {
+        
+    }
+
+    handleLogout = () => {
+        this.props.hasAuthenticated(false);
+    }
+
     render() {
         return (
             <div className="header-main-box">
@@ -19,9 +26,8 @@ class Header extends Component {
                     <img className="img-logo-header" src={logo2} />
 
                     <div className="right-content-box">
-                        <div className="logout-text">ลงชื่อออก
-                               </div>
-                        <div className="username-text">gminemini  </div>
+                        <div className="logout-text" onClick={this.handleLogout}> ลงชื่อออก </div>
+                        <div className="username-text"> {this.props.name}  </div>
                     </div>
                 </div>
                 <div className="navbar-box">

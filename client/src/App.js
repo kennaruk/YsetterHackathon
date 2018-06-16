@@ -1,39 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Routes from './containers/Routes';
 import Login from './containers/Login';
-import Register from './containers/Register';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      isAuthenticated: true
+      isAuthenticated: true,
+      name: ''
     }
   }
 
   componentDidMount() {
+    const authenticated = sessionStorage.getItem('authenticated');
     this.setState({ 
-      isAuthenticated: localStorage.getItem('authenticated')
+      isAuthenticated: authenticated
     });
   }
 
   hasAuthenticated = (authenticated) => {
-    localStorage.setItem('authenticated', authenticated);
+    if(authenticated) {
+      sessionStorage.setItem('authenticated', authenticated);
+    } else {
+      sessionStorage.removeItem('authenticated')
+    }
     this.setState({
-      isAuthenticated: authenticated
+      isAuthenticated: authenticated,
+      name: sessionStorage.getItem('name')
     })
   };
 
   render() {
+    const childProps = {
+      isAuthenticated: this.state.isAuthenticated,
+      hasAuthenticated: this.hasAuthenticated,
+      name: this.state.name
+    }
+
     return (
       <div className="App">
         {this.state.isAuthenticated ? 
-          <Routes/> : 
-          <Login 
-            hasAuthenticated={this.hasAuthenticated}
+          <Routes 
+            {...childProps}
+          /> : 
+          <Login
+            {...childProps}
           />}
       </div>
     );

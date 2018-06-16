@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import Login from './Login';
 import Home from './Home';
 import LaborRegister from './LaborRegister';
 import Header from './Header';
 import Register from './Register';
 
 class Routes extends Component {
+    constructor(props) {
+        super(props);
+    }
+    
     render() {
         return (
             <div>

@@ -24,7 +24,11 @@ module.exports = (() => {
 
     const loginByUsernamePassword = (user, callback) => {
         Models.user.findOne({username: user.username}).then(userData => {
-            callback(null,  bcrypt.compareSync(user.password, userData.password));
+            if(bcrypt.compareSync(user.password, userData.password)) {
+                callback(null, userData);
+            } else {
+                callback(null, null);
+            }
         }).catch(err => {
             callback(err, null);
         });
