@@ -3,27 +3,21 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var projectSchema = new Schema({
-  name:String,
-  degree:Number,
-  color:String,
-  brand:String,
-  country:String,
-  price:{
-    type:Number,
-    default: 0
-  },
-  type:String,
-  rate:{
-    type:Number,
-    default: 0
-  },
-  img:String,
-  date:{
-    type:Date,
+  code:    String,
+  th_name: String,
+  en_name: String,
+  province:  String,
+  start_date:  {
+    type: Date,
     default: Date.now
-  }
-
+  },
+  end_date:  {
+    type: Date,
+    default: Date.now
+  },
+  contact: Object,
+  camp:   Object
 });
 
-const Project = mongoose.model('Project',projectSchema);
+const Project = mongoose.model('Project', projectSchema);
 module.exports = Project;
