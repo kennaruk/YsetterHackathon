@@ -18,20 +18,22 @@ class NewLabor5 extends Component {
 
                     <div className="register-box">
 
-                        <div class="floatleft_box">
+                        <div class="floatleft_box2">
                             <label class="container margin_right">เข้าโรงเรียนในระบบการศึกษาของประเทศไทย
                                      <input type="radio" checked="checked" name="radio3" />
                                 <span class="checkmark checkmark_orange"></span>
                             </label>
-                            <label class="container">ไม่ได้เข้าโรงเรียนในระบบการศึกษาของประเทศไทย <br/>
-                                 <input className="other-input" type="text" />
+                            <label class="container ">ไม่ได้เข้าโรงเรียนในระบบการศึกษาของประเทศไทย
                                 <input type="radio" name="radio3" />
                                 <span class="checkmark checkmark_orange"></span>
                             </label>
-                            <label class="container">ได้เข้าโรงเรียนในประเทศของตนเอง ระบุประเทศ
-                                      <input type="radio" name="radio3" />
-                                <span class="checkmark checkmark_orange"></span>
+                            <label class="container ">ได้เข้าโรงเรียนในประเทศของตนเอง ระบุประเทศ
+                                <input type="radio" name="radio3" />
+                                <span class="checkmark checkmark_orange">
+                                </span>
                             </label>
+                            
+                            <input className="input-school3" type="text" />
                             <label class="container">เข้าเรียนกับพื้นที่ปลอดภัยสำหรับเด็กของแสนสิริ
                                       <input type="radio" name="radio3" />
                                 <span class="checkmark checkmark_orange"></span>
@@ -40,8 +42,11 @@ class NewLabor5 extends Component {
                                       <input type="radio" name="radio3" />
                                 <span class="checkmark checkmark_orange"></span>
                             </label>
+            
 
                         </div>
+                        <div className="input-grade">กรณีเข้าโรงเรียนในระบบการศึกษาของประเทศไทย
+                                    ปัจจุบัน อยู่ระดับชั้น <input className="input-school2" type="text" /></div>
                         <table id="customers">
                             <tr>
                                 <th>ประวัติการศึกษา</th>
@@ -90,7 +95,7 @@ class NewLabor5 extends Component {
 
                             </tr>
                             <tr>
-                                <td>อื่นๆ</td>
+                                <td>อื่นๆ <input className="other-school" type="text" /></td>
                                 <td>
                                     <input className="input-school" type="text" />
                                 </td>

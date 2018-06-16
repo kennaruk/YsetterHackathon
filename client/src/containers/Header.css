@@ -68,6 +68,7 @@ box-sizing: border-box;
     text-align: center;
     position: relative;
     box-sizing: border-box;
+    line-height: 16px;
 }
 
 .right-content-box{

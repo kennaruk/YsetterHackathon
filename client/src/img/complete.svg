@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #444;
+      }
+    </style>
+  </defs>
+  <path id="ic_check_circle_24px" class="cls-1" d="M55,2a53,53,0,1,0,53,53A53.019,53.019,0,0,0,55,2ZM44.4,81.5,17.9,55l7.473-7.473L44.4,66.5,84.627,26.274,92.1,33.8Z" transform="translate(-2 -2)"/>
+</svg>
