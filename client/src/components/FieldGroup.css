@@ -1,13 +1,35 @@
+
 .input-login{
     border: none;
-    border-radius: 6px;
-    width: 100%;
-    height: 44px;
-    background-color: white;
+   margin-bottom: 12px;
+   width: 100%;
+   position: relative;
+   box-sizing: border-box;
+    /* margin: 0px auto; */
+    /* background-color: black; */
 }
 .input-text{
     width: 100%;
     text-align: left;
-    color: black;
+    color: white;
     font-size: 18px;
+    
+}
+.input-form{
+    width: calc(100% );
+    height: 44px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    padding-left: 12px;
+    box-sizing: border-box;
+}   
+
+
+
+ /* web */
+@media (min-width: 1024px){
+  
+   
+   
 }

@@ -1,3 +1,109 @@
-.mainClass {
-    background-origin: padding-box;
+body{
+    background: linear-gradient(#040404, #A8A7A7);
+    margin:0px;
+    padding:0px;
+    width:100%;
+    background: url("../img/bg.svg"); 
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
 }
+.login-box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    padding: 24% 12%;
+    margin: 0px auto;
+    /* background-color: black; */
+}
+.img-logo{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.forgetpass-text{
+    width: 100%;
+    text-align: right;
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.img-logo-box{
+    width: 70%;
+    height: 20%;
+    margin: 0 auto 24px auto;
+    position: relative;
+    box-sizing: border-box;
+}
+.img-logo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.alert-text{
+    width: 100%;
+    color: #d03c3c;
+    text-align: left;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #BEBEBE;
+    font-size: 18px;text-align:left;
+    font-family: 'thaisans_neueregular' !important;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #BEBEBE; font-size: 18px;text-align:left;
+    font-family: 'thaisans_neueregular' !important;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #BEBEBE; font-size: 18px;text-align:left;
+    font-family: 'thaisans_neueregular' !important;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #BEBEBE; font-size: 18px;text-align:left;
+    font-family: 'thaisans_neueregular' !important;
+  }
+
+
+ /* web */
+ @media (min-width: 1024px){
+    .login-box{
+        width:100%;
+        height: 100vh;
+        position: relative;
+        box-sizing: border-box;
+        padding: 10% 37% 0 37%;
+        margin: 0px auto;
+        /* background-color: black; */
+    }
+}
+
+
+ /* ipad-pro */
+ @media (max-width: 1024px) and (min-height:1366px){
+    .login-box{
+        width:100%;
+        height: 100vh;
+        position: relative;
+        box-sizing: border-box;
+        padding: 25% 30% 0 30%;
+        margin: 0px auto;
+        /* background-color: black; */
+    }
+}
+ /* web */
+ @media (max-width: 768px) and (min-height:1024px){
+    .login-box{
+        width:100%;
+        height: 100vh;
+        position: relative;
+        box-sizing: border-box;
+        padding: 20% 30% 0 30%;
+        margin: 0px auto;
+    }
+    
+    
+   
+}
+
