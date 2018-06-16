@@ -37,7 +37,7 @@ var labourSchema = new Schema({
       education_current:String
     }
   ],
-  Project:Sting
+  project:String
 });
 
 const Labour = mongoose.model("Labour", labourSchema);
