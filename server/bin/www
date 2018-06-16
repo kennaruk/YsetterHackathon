@@ -7,12 +7,13 @@
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
+var mongoose = require('mongoose');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
 /**
@@ -24,6 +25,15 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://mrboomba:bcc32171@ds115350.mlab.com:15350/heroku_tkkbw8c3", function (err, client) {
+  if (err) {
+    console.log(err);
+    process.exit(1);
+  }
+  console.log("Database connection ready");
+
+})
 
 server.listen(port);
 server.on('error', onError);

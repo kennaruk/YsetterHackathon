@@ -14,10 +14,27 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({ 
+      isAuthenticated: localStorage.getItem('authenticated')
+    });
+  }
+
+  hasAuthenticated = (authenticated) => {
+    localStorage.setItem('authenticated', authenticated);
+    this.setState({
+      isAuthenticated: authenticated
+    })
+  };
+
   render() {
     return (
       <div className="App">
-        {this.state.isAuthenticated ? <Routes/> : <Login/>}
+        {this.state.isAuthenticated ? 
+          <Routes/> : 
+          <Login 
+            hasAuthenticated={this.hasAuthenticated}
+          />}
       </div>
     );
   }
