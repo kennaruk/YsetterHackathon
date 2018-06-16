@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+/* user login register zone */
 router.get('/user', (req, res, next) => {
   Controllers.user.getUserByUsername('kennaruk', (err, user) => {
     if(err)
@@ -33,7 +34,7 @@ router.post('/user', (req, res, next) => {
     else
       res.json({
         success: true,
-        user: user
+        data: user
       });
   });
 });
@@ -56,4 +57,43 @@ router.post('/login', (req, res, next) => {
   });
 });
 
+/* project zone */
+router.get('/project', (req, res, next) => {
+  Controllers.project.getAllProject((project) => {
+    if(!project) 
+      res.json({
+        success: false
+      });
+    else
+      res.json({
+        success: true,
+        data: project
+      });
+  });
+});
+
+router.post('/project', (req, res, next) => {
+  let project = {
+    code: req.body.code,
+    th_name: req.body.th_name,
+    en_name: req.body.en_name,
+    province: req.body.province,
+    start_date: req.body.start_date,
+    end_date: req.body.end_date,
+    contact: req.body.contact
+  }
+
+  Controllers.project.addProject(project, (err, project) => {
+    if(err)
+      res.json({
+        success: false,
+        err: err
+      });
+    else
+      res.json({
+        success: true,
+        data: project
+      })
+  });
+});
 module.exports = router;

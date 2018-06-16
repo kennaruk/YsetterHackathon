@@ -9,6 +9,7 @@ fs.readdir(__dirname, (err, files) => {
                  */
         if (file !== 'index.js') {
             const moduleName = file.split('.')[0];
+            console.log('moduleName:', moduleName);
             exports[moduleName] = require('./' + moduleName);
         }
     });
