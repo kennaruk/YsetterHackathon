@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Routes from './containers/Routes';
+import Login from './containers/Login';
+import Register from './containers/Register';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      isAuthenticated: true
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ 
+      isAuthenticated: localStorage.getItem('authenticated')
+    });
+  }
+
+  hasAuthenticated = (authenticated) => {
+    localStorage.setItem('authenticated', authenticated);
+    this.setState({
+      isAuthenticated: authenticated
+    })
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {this.state.isAuthenticated ? 
+          <Routes/> : 
+          <Login 
+            hasAuthenticated={this.hasAuthenticated}
+          />}
       </div>
     );
   }

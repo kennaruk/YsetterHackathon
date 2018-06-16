@@ -1,0 +1,18 @@
+.button-box{
+    width: 100%;
+    height: 50px;
+    background-color: #3A4E63;
+    color: white;
+    border-radius: 2px;
+    margin-top: 48px;
+    font-size: 18px;
+    box-sizing: border-box;
+    position: relative;
+}
+.set-center{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

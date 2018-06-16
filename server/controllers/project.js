@@ -2,15 +2,21 @@ module.exports = (() => {
     const path = require("path");
     const Models = require(path.resolve(__dirname, '../models/'));
   
-    const getProject = (searchObj, callback) => {
-      if (searchObj._id) {
-        Models.project.findOne({_id : searchObj._id}).exec((err, doc) => callback(err, doc));
-        return;
-      } else {
-        Models.project.find(searchObj).exec((err, doc) => callback(err, doc));
-        return;
-      }
+    const addProject = (project, callback) => {
+      new Models.project(project).then(project => {
+        callback(null, project);
+      }).catch(err => {
+        callback(err, null);
+      });
+    };
+
+    const getAllProject = (callback) => {
+      Models.project.find({}).then(project => {
+        callback(project);
+      }).catch(err => {
+        callback(null);
+      });
     }
   
-    return {getProject};
+    return {addProject, getAllProject};
   })();
