@@ -15,10 +15,18 @@ class ScanQrCode extends Component {
 
     handleScan = (data) => {
         if(data) {
-            alert('อัพเดทข้อมูลแรงงานเรียบร้อย');
-            this.setState({
-                result: data
+            let url = "/labour/"+data;
+            console.log('url:', url);
+
+            fetch(url)
+            .then(res => res.json())
+            .then(res => {
+                alert(JSON.stringify('พบข้อมูลแรงงาน!'));
+                this.setState({
+                    result: JSON.stringify(res.data)
+                });
             });
+            
         }
     }
 

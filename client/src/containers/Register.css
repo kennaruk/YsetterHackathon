@@ -2,11 +2,12 @@ body.register-body{
     margin:0px;
     padding:0px;
     width:100%;
+    padding-top: 160px;
     background: url("../img/bgcontent.png"); 
     background-size:     cover;                   
     background-repeat:   no-repeat;
     overflow-y:auto;
-    background-position: center center; 
+    background-position: center center;
 }
 .register-box{
     width: 100%;
