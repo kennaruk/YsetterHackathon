@@ -3,7 +3,6 @@ import './ScanQrCode.css'
 import BodyClassName from 'react-body-classname';
 import search from '../img/search.svg';
 import QrReader from 'react-qr-reader';
-import { withAlert } from 'react-alert';
 
 class ScanQrCode extends Component {
     constructor(props) {
@@ -45,5 +44,5 @@ class ScanQrCode extends Component {
         )
     }
 }
-export default withAlert(ScanQrCode);
+export default ScanQrCode;
 
