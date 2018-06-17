@@ -8,18 +8,32 @@ class Info extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            first_name: 'บุทิตา',
-            last_name: 'ม่วงทอง',
-            id_number: '456635',
-            gender: 'ชาย',
-            birth_date: '26/07/97',
-            age: '20',
-            nationality: 'ไทย',
-            wasInSchool: 'เคย',
-            grade: 'ป.4',
-            wasVaccine: 'เคย'
+            first_name: '',
+            last_name: '',
+            id_number: '',
+            gender: '',
+            birth_date: '',
+            age: '',
+            nationality: '',
+            wasInSchool: '',
+            grade: '',
+            wasVaccine: ''
         }
     }
+    
+    componentDidMount() {
+        var id = this.props.match.params.id;
+        var url = "/info/"+id;
+        console.log('url:', url);
+        fetch(url)
+        .then(res => res.json())
+        .then(res => {
+            this.setState({
+                ...res.data
+            })
+        });
+    }
+
     render() {
         return (
             <BodyClassName className="newlabor-body">

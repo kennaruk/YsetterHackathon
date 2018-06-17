@@ -72,6 +72,7 @@ router.get('/labour',function(req,res,next){
 });
 
 router.get('/info/:code',function(req,res,next){
+  console.log('code:', req.params.code);
   Controllers.labour.getLabour({id_number:req.params.code},function(err,labour){
     if(err){
       res.status(500).json({
