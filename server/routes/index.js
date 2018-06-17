@@ -32,17 +32,20 @@ router.get('/listLabour',function(req,res,next){
 });
 
 router.get('/children',function(req,res,next){
-  Controllers.labour.getOnlyChildren(function(err,labour){
+  Controllers.labour.getChildren(function(err,labour){
     if(err){
+      console.log(err);
+      
       res.status(500).json({
         success:false,
         err: err
       })
     }
     else{
+      var result = labour.map(a => a.follower);
       res.status(200).json({
         success:true,
-        data:labour
+        data:result
       })
     }
   })

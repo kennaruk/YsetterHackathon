@@ -23,7 +23,7 @@ module.exports = (() => {
     }
 
     const getOnlyChildren = (callback) => {
-        Models.labour.aggregate ({follower:{$elemMatch:{status:"CHILD"}}}).exec((err,doc) => {
+        Models.labour.aggregate({follower:{$elemMatch:{status:"CHILD"}}}).exec((err,doc) => {
             callback(err,doc)
         });
     }
