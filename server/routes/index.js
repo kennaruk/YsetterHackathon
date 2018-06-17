@@ -65,6 +65,23 @@ router.get('/labour',function(req,res,next){
   })
 });
 
+router.get('/labour/:code',function(req,res,next){
+  Controllers.labour.getLabour({id_number:req.params.code},function(err,labour){
+    if(err){
+      res.status(500).json({
+        success:false,
+        err: err
+      })
+    }
+    else{
+      res.status(200).json({
+        success:true,
+        data:labour[0]
+      })
+    }
+  })
+});
+
 router.get('/info/:code',function(req,res,next){
   Controllers.labour.getLabour({id_number:req.params.code},function(err,labour){
     if(err){
