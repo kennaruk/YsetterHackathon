@@ -58,10 +58,6 @@ const MyMapComponent = compose(
       clickable="true"
       onClick={showInfo}
     >
-    
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
     </Marker>
     <Marker
       position={{ lat: 13.112, lng: 99.821 }}
@@ -74,90 +70,66 @@ const MyMapComponent = compose(
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
     </Marker>
     <Marker
       position={{ lat: 14.644, lng: 104.234 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
+
     </Marker>
     <Marker
       position={{ lat: 13.673, lng: 101.201 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
     </Marker>
     <Marker
       position={{ lat: 7.559, lng: 99.616 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/green-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
     </Marker>
     <Marker
       position={{ lat: 13.624, lng: 100.935 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/green-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
     </Marker>
     <Marker
       position={{ lat: 18.665, lng: 98.871 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/green-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
+
     </Marker>
     <Marker
       position={{ lat: 15.633, lng: 100.132 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
     </Marker>
     <Marker
       position={{ lat: 14.731, lng: 100.114 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
+     
     </Marker>
     <Marker
       position={{ lat: 14.26, lng: 100.114 }}
       clickable="true"
       icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
       onClick={showInfo}
-      >
-      <InfoWindow>
-        <h1>test</h1>
-      </InfoWindow>
+    >
     </Marker>
   </GoogleMap>
 ));
