@@ -13,110 +13,107 @@ class NewLabor4 extends Component {
             <BodyClassName className="newlabor-body">
                 <div>
                     <div className="registerlabor-text">
-                        ประวัติวัคซีน
+                        ประวัติการศึกษา
                      </div>
 
                     <div className="register-box">
 
-
-                        <table id="customers">
-                            <tr>
-                                <th>อายุ</th>
-                                <th>ชื่อวัคซีน</th>
-                                <th>นัดวันที่</th>
-                                <th>รับวัคซีนวันที่</th>
-                            </tr>
-                            <tr>
-                                <td>แรกเกิด - 1 เดือน</td>
-                                <td>BCG HB1</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>2 เดือน</td>
-                                <td>OPV1DTP-HB</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>4 เดือน</td>
-                                <td>OPV2 IPV1 DTP-HB2</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>6 เดือน</td>
-                                <td>OPV3 DTP-HB3</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>9 เดือน</td>
-                                <td>MMR1</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>1 ปี</td>
-                                <td>LAJE1</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>1 ปี 6 เดือน</td>
-                                <td>OPV4DTP4</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>2 ปี  6 เดือน</td>
-                                <td>MMR2 LAJE2</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-                            <tr>
-                                <td>4 ปี</td>
-                                <td>OPV5 DTP5</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
-                            </tr>
-
-                        </table>
-                        <div class="header color_blue">ประวัติการศึกษา</div>
-                        <div class="floatleft_box">
-                            <label class="container margin_right">มี
+                        <div class="floatleft_box2">
+                            <label class="container margin_right">เข้าโรงเรียนในระบบการศึกษาของประเทศไทย
                                      <input type="radio" checked="checked" name="radio3" />
                                 <span class="checkmark checkmark_orange"></span>
                             </label>
-                            <label class="container">ไม่มี
+                            <label class="container ">ไม่ได้เข้าโรงเรียนในระบบการศึกษาของประเทศไทย
+                                <input type="radio" name="radio3" />
+                                <span class="checkmark checkmark_orange"></span>
+                            </label>
+                            <label class="container ">ได้เข้าโรงเรียนในประเทศของตนเอง ระบุประเทศ
+                                <input type="radio" name="radio3" />
+                                <span class="checkmark checkmark_orange">
+                                </span>
+                            </label>
+                            
+                            <input className="input-school3" type="text" />
+                            <label class="container">เข้าเรียนกับพื้นที่ปลอดภัยสำหรับเด็กของแสนสิริ
                                       <input type="radio" name="radio3" />
                                 <span class="checkmark checkmark_orange"></span>
                             </label>
+                            <label class="container">ไม่ได้เข้าเรียนกับพื้นที่ปลอดภัยสำหรับเด็กของแสนสิริ
+                                      <input type="radio" name="radio3" />
+                                <span class="checkmark checkmark_orange"></span>
+                            </label>
+            
 
-                        </div></div>
+                        </div>
+                        <div className="input-grade">กรณีเข้าโรงเรียนในระบบการศึกษาของประเทศไทย
+                                    ปัจจุบัน อยู่ระดับชั้น <input className="input-school2" type="text" /></div>
+                        <table id="customers">
+                            <tr>
+                                <th>ประวัติการศึกษา</th>
+                                <th>ชื่อโรงเรียน</th>
+                                <th>ปีการศึกษา</th>
+
+                            </tr>
+                            <tr>
+                                <td>ระดับอนุบาล</td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>ระดับประถมศึกษา</td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>ระดับมัธยมศึกษาตอนต้น</td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>ระดับมัธยมศึกษาตอนปลาย</td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>อื่นๆ <input className="other-school" type="text" /></td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+                                <td>
+                                    <input className="input-school" type="text" />
+                                </td>
+
+                            </tr>
 
 
-                    <div className="next-btn" onClick={this.props.nextStep}>
-                        <span className="set-center">ถัดไป</span>
+                        </table>
+                        <div className="next-btn" onClick={this.props.nextStep}>
+                            <span className="set-center">เสร็จสิ้น</span>
+                        </div>
                     </div>
+
+
+
                 </div>
 
 

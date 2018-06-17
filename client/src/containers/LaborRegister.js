@@ -13,11 +13,11 @@ class LaborRegister extends Component {
                         ลงทะเบียนพนักงาน
                      </div>
 
-                    <div className="choose-btn margin-top">
-                        <span className="set-center" onClick={() => { this.props.history.push('/NewLabor1') }}>ลงทะเบียน
+                    <div className="choose-btn margin-top" onClick={() => { this.props.history.push('/NewLabor') }}>
+                        <span className="set-center">ลงทะเบียน
                              <br />   แรงงานใหม่</span>
                     </div>
-                    <div className="choose-btn">
+                    <div className="choose-btn" onClick={() => { this.props.history.push('/ScanQrCode') }}>
                         <span className="set-center">ลงทะเบียน
                         <br /> แรงงานเก่า</span>
                     </div>
