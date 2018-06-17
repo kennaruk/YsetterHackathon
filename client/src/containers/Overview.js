@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./Overview.css";
 import imgproject from "../img/imgproject.png";
 import BodyClassName from "react-body-classname";
-import { Doughnut } from "react-chartjs-2";
+
 import {
   withScriptjs,
   withGoogleMap,
@@ -13,23 +13,6 @@ import {
 } from "react-google-maps";
 import { compose, withProps } from "recompose";
 
-var isOpen = [];
-var data = {
-  labels: ["ไทย", "ลาว", "พม่า", "กัมพูชา"],
-  datasets: [
-    {
-      label: "My First dataset",
-      backgroundColor: [
-        "rgb(158,203,243)",
-        "rgb(128,143,203)",
-        "rgb(204,162,246)",
-        "rgb(46,51,64)"
-      ],
-      borderColor: "rgb(122,122,122)",
-      data: [15, 10, 5, 2]
-    }
-  ]
-};
 
 function showInfo() {
   console.log("press");
@@ -185,17 +168,14 @@ class Overview extends Component {
     return (
       <BodyClassName className="home-body">
         <div>
-          <div className="text-name-project">ภาพรวมของโครงการ</div>
+          <div className="text-name-project">   สถานะการส่งทะเบียนแต่ละโครงการ</div>
 
           <div className="detail-box">
-            <div className="detail-head-text">สัดส่วนสัญชาติต่อปี (%)</div>
-            <div className="graph-box">
-              <Doughnut data={data} height={500} width={700} />
-            </div>
-            <div className="detail-head-text">
-              สถานะการส่งทะเบียนแต่ละโครงการ
-            </div>
-            <div className="graph-box">
+           
+            {/* <div className="detail-head-text">
+           
+            </div> */}
+            <div className="graph-box3">
               <MyMapComponent />
             </div>
           </div>

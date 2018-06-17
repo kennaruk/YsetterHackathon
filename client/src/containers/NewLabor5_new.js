@@ -53,7 +53,7 @@ class NewLabor5_new extends Component {
 
                             </tr>
                             <tr>
-                                <td>อื่นๆ ak;fak; </td>
+                                <td>อื่นๆ  </td>
                                 <td>ระดับอนุบาล</td>
                                 <td>ระดับอนุบาล</td>
 

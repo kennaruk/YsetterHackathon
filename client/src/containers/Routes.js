@@ -20,6 +20,9 @@ import HeaderAdmin from './HeaderAdmin';
 import Info from './Info';
 import NewLabor4_new from './NewLabor4_new';
 import NewLabor5_new from './NewLabor5_new';
+import BodyClassName from 'react-body-classname';
+
+
 
 class Routes extends Component {
     constructor(props) {
@@ -29,6 +32,7 @@ class Routes extends Component {
     
     render() {
         return (
+            <BodyClassName className="header-body">
             <div>
                 {this.props.role === "SC" ? <Header {...this.props} /> : <HeaderAdmin {...this.props} /> }
                 <Switch>
@@ -58,6 +62,7 @@ class Routes extends Component {
                     </div>
                 </Switch>
             </div>
+            </BodyClassName >
 
         )
     }
