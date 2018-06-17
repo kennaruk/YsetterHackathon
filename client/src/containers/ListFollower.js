@@ -10,19 +10,31 @@ class NewLabor6 extends Component {
         super(props);
         this.state = {
             follower: [
-                "นิติพัฒน์ วุฒิศศิวัฒน์",
-                "ธนวิทธ์ ธนวิโรจน์",
-                "เกวลิน ชาญชนโรจน์",
-                "ธนกร ปีติวรภัทร",
-                "ณัฐนนท์ ยะนิล",
-                "พีรสรณ์ เหมศาสตร์",
-                "อายุทธ์ มั่งมีทรัพย์",
-                "จีมาย อาโลฮ่า",
-                "สหกรณ์ ทองพรมห์",
-                "พรพรหม พรมวงษา"
+                {
+                    name:  "นิติพัฒน์ วุฒิศศิวัฒน์",
+                    id: "1111"
+                }
             ],
             search: ''
         }
+    }
+
+    componentDidMount() {
+        fetch('/children')
+        .then(res => res.json())
+        .then(res => {
+            let follower = [];
+            res.data.forEach(datum => {
+                follower.push({
+                    name: datum.follower[0].first_name + " " + datum.follower[0].last_name,
+                    id: datum.id_number
+                });
+            });
+
+            this.setState({
+                follower: follower
+            });
+        });
     }
 
     handleChange = (event) => {
@@ -46,12 +58,12 @@ class NewLabor6 extends Component {
                         </div>
                         <table id="customers" className="customers2">
                             {this.state.follower.filter(follow => {
-                                return follow.includes(this.state.search);
+                                return follow.name.includes(this.state.search);
                             }).map((follow => {
                                 return (
                                     <tr>
-                                        <td>{follow}
-                                        <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/>
+                                        <td>{follow.name}
+                                        <img className="img-profile" onClick={ () => {this.props.history.push('/Info/'+follow.id)} } src={profile}/>
                                         </td>
                                     </tr>
                                 )
