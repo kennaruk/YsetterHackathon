@@ -12,6 +12,10 @@ module.exports = (() => {
       }
     }
 
+    const getLabourByIdNo = (idNo, callback) => {
+        // Models.labour.find()
+    };
+
     const getChildren = (callback) => {
         Models.labour.find({follower:{$elemMatch:{status:"CHILD"}}}).exec((err,doc) => {
             callback(err,doc)
