@@ -25,7 +25,8 @@ class NewLabor extends Component {
             fol_birth_date: '',
             fol_nationality: '',
             fol_gender: 'GIRL',
-            fol_thai_ed: "false"
+            fol_thai_ed: "false",
+            fol_vaccine: ""
             
         }
     }
@@ -55,7 +56,7 @@ class NewLabor extends Component {
             step: 5
         });
     }
-    
+
     handleChange = (event) => {
         console.log(event.target.id, event.target.value);
         this.setState({

@@ -16,17 +16,18 @@ import ScanQrCode from './ScanQrCode';
 import RegisterComplete from './RegisterComplete';
 import Overview from './Overview';
 import Nationality from './Nationality';
-
+import HeaderAdmin from './HeaderAdmin';
 
 class Routes extends Component {
     constructor(props) {
         super(props);
+        console.log('props:', this.props);
     }
     
     render() {
         return (
             <div>
-                <Header {...this.props} />
+                {this.props.role === "SC" ? <Header {...this.props} /> : <HeaderAdmin {...this.props} /> }
                 <Switch>
                     <div className="mainClass">
                         <Route path="/" exact component={Home}/>
