@@ -4,7 +4,7 @@ import BodyClassName from 'react-body-classname';
 
 
 
-class NewLabor4 extends Component {
+class NewLabor4_new extends Component {
     constructor(props) {
         super(props);
     }
@@ -29,74 +29,56 @@ class NewLabor4 extends Component {
                             <tr>
                                 <td>แรกเกิด - 1 เดือน</td>
                                 <td>BCG HB1</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>2 เดือน</td>
                                 <td>OPV1DTP-HB</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>4 เดือน</td>
                                 <td>OPV2 IPV1 DTP-HB2</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>6 เดือน</td>
                                 <td>OPV3 DTP-HB3</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>9 เดือน</td>
                                 <td>MMR1</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>1 ปี</td>
                                 <td>LAJE1</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>1 ปี 6 เดือน</td>
                                 <td>OPV4DTP4</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>2 ปี  6 เดือน</td>
                                 <td>MMR2 LAJE2</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
                             <tr>
                                 <td>4 ปี</td>
                                 <td>OPV5 DTP5</td>
-                                <td>
-                                    <input className="date-vacine" type="date" />
-                                </td>
-                                <td>  <input className="date-vacine" type="date" /></td>
+                                <td>  12/02/2018</td>
+                                <td>  12/02/2018</td>
                             </tr>
 
                         </table>
@@ -115,7 +97,7 @@ class NewLabor4 extends Component {
 
 
                     <div className="next-btn set-width-nextbtn">
-                        <span className="set-center">ถัดไป</span>
+                        <span className="set-center">กลับ</span>
                     </div>
                 </div>
 
@@ -125,5 +107,5 @@ class NewLabor4 extends Component {
         )
     }
 }
-export default NewLabor4;
+export default NewLabor4_new;
 
