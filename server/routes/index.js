@@ -10,23 +10,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/labour',function(req,res,next){
-  Controllers.labour.getLabour({},function(err,labour){
-    if(err){
-      res.status(500).json({
-        success:false,
-        err: err
-      })
-    }
-    else{
-      res.status(200).json({
-        success:true,
-        data:labour
-      })
-    }
-  })
-});
-
 router.get('/listLabour',function(req,res,next){
   Controllers.labour.getLabour({},function(err,labour){
     if(err){
@@ -98,10 +81,23 @@ router.get('/info/:code',function(req,res,next){
     }
     else{
       result={};
-      labour.age = parseInt(labour.birthdate.split('/')[0])-parseInt((new Date()).getFullYear())
+      follower=labour[0].follower[0];
+      result.first_name = follower.first_name;
+      result.last_name = follower.last_name;
+      result.id_number = follower.id_number;
+      result.gender = follower.gender;
+      result.birth_date = follower.birth_date;
+      result.nationality = follower.nationality;
+      if(follower.education.thai||follower.education.not_thai||follower.education.other||follower.education.other_string||follower.education.sansiri||follower.education.not_sansiri)
+      result.wasInSchool="เคย"
+      else
+      result.wasInSchool="ไม่เคย"
+      result.grade = follower.education_current
+      result.age = parseInt(parseInt((new Date()).getFullYear()-follower.birth_date.split('/')[2])+543)
+      console.log(result.age);
       res.status(200).json({
         success:true,
-        data:labour
+        data:result
       })
     }
   })
