@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter }  from 'react-router-dom';
 import './App.css';
 import Routes from './containers/Routes';
 import Login from './containers/Login';
@@ -31,6 +32,7 @@ class App extends Component {
       localStorage.setItem('name', name);
       localStorage.setItem('role', role);
     } else {
+      this.props.history.push('/');
       localStorage.removeItem('authenticated')
       localStorage.removeItem('name')
       localStorage.removeItem('role')
@@ -64,4 +66,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
