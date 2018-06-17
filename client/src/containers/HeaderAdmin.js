@@ -42,7 +42,7 @@ class Header extends Component {
             <div className="header-main-box">
                 <div className="header-logo" >
                     <img className="img-logo-header" src={logo2} />
-                <div className="register-supplier">สมัคร</div>
+                <div className="register-supplier" onClick={() => {this.props.history.push('/register')}}>สมัคร Supplier</div>
                     <div className="right-content-box">
                         <div className="logout-text" onClick={this.handleLogout}> ลงชื่อออก </div>
                         <div className="username-text"> {this.props.name}  </div>
