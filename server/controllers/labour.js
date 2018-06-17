@@ -22,6 +22,12 @@ module.exports = (() => {
         });
     }
 
+    const getOnlyChildren = (callback) => {
+        Models.labour.aggregate ({follower:{$elemMatch:{status:"CHILD"}}}).exec((err,doc) => {
+            callback(err,doc)
+        });
+    }
+
     const createLabour = (createObj, callback) => {
         new Models.labour(createObj).save().then(labour=>{
             callback(null,labour);
@@ -30,5 +36,5 @@ module.exports = (() => {
         });
       }
   
-    return {getLabour,createLabour,getChildren};
+    return {getLabour,createLabour,getChildren,getOnlyChildren};
   })();

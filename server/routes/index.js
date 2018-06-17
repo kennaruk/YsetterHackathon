@@ -38,7 +38,7 @@ router.get('/listLabour',function(req,res,next){
 });
 
 router.get('/children',function(req,res,next){
-  Controllers.labour.getChildren(function(err,labour){
+  Controllers.labour.getOnlyChildren(function(err,labour){
     if(err){
       res.status(500).json({
         success:false,
@@ -66,6 +66,23 @@ router.get('/labour',function(req,res,next){
       res.status(200).json({
         success:true,
         data:labour
+      })
+    }
+  })
+});
+
+router.get('/labour/:code',function(req,res,next){
+  Controllers.labour.getLabour({id_number:req.params.code},function(err,labour){
+    if(err){
+      res.status(500).json({
+        success:false,
+        err: err
+      })
+    }
+    else{
+      res.status(200).json({
+        success:true,
+        data:labour[0]
       })
     }
   })
