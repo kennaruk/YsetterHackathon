@@ -8,7 +8,29 @@ import profile from '../img/profile.svg';
 class NewLabor6 extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            follower: [
+                "นิติพัฒน์ วุฒิศศิวัฒน์",
+                "ธนวิทธ์ ธนวิโรจน์",
+                "เกวลิน ชาญชนโรจน์",
+                "ธนกร ปีติวรภัทร",
+                "ณัฐนนท์ ยะนิล",
+                "พีรสรณ์ เหมศาสตร์",
+                "อายุทธ์ มั่งมีทรัพย์",
+                "จีมาย อาโลฮ่า",
+                "สหกรณ์ ทองพรมห์",
+                "พรพรหม พรมวงษา"
+            ],
+            search: ''
+        }
     }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.id]: event.target.value
+        });
+    }
+
     render() {
         return (
             <BodyClassName className="newlabor-body">
@@ -19,49 +41,22 @@ class NewLabor6 extends Component {
 
                     <div className="register-box">
                         <div className="search-box">
-                            <input className="search-form" type="text" placeholder="ค้นหา" />
+                            <input className="search-form" id="search" onChange={this.handleChange} value={this.state.search} type="text" placeholder="ค้นหา" />
                             <img className="img-search" src={search} />
                         </div>
                         <table id="customers" className="customers2">
-                          
-                            <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์
-                                <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr>
-                            <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr>
-                            <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
-                            </tr>
-                         
+                            {this.state.follower.filter(follow => {
+                                return follow.includes(this.state.search);
+                            }).map((follow => {
+                                return (
+                                    <tr>
+                                        <td>{follow}
+                                        <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/>
+                                        </td>
+                                    </tr>
+                                )
+                            }))}
                         </table>
-
-                        {/* <div className="next-btn">
-                            <span className="set-center">ถัดไป</span>
-                        </div> */}
                     </div>
 
 
