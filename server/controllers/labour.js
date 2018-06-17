@@ -22,8 +22,14 @@ module.exports = (() => {
         });
     }
 
+    const getChildrenById = (searchObj,callback) => {
+        Models.labour.find({follower:{$elemMatch:{status:"CHILD",id_number:searchObj.id_number}}}).exec((err,doc) => {
+            callback(err,doc)
+        });
+    }
+
     const getOnlyChildren = (callback) => {
-        Models.labour.aggregate ({follower:{$elemMatch:{status:"CHILD"}}}).exec((err,doc) => {
+        Models.labour.aggregate({follower:{$elemMatch:{status:"CHILD"}}}).exec((err,doc) => {
             callback(err,doc)
         });
     }
@@ -36,5 +42,5 @@ module.exports = (() => {
         });
       }
   
-    return {getLabour,createLabour,getChildren,getOnlyChildren};
+    return {getLabour,createLabour,getChildren,getOnlyChildren,getChildrenById};
   })();

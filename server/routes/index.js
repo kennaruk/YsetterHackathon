@@ -38,8 +38,10 @@ router.get('/listLabour',function(req,res,next){
 });
 
 router.get('/children',function(req,res,next){
-  Controllers.labour.getOnlyChildren(function(err,labour){
+  Controllers.labour.getChildren(function(err,labour){
     if(err){
+      console.log(err);
+      
       res.status(500).json({
         success:false,
         err: err
@@ -49,6 +51,26 @@ router.get('/children',function(req,res,next){
       res.status(200).json({
         success:true,
         data:labour
+      })
+    }
+  })
+});
+
+router.get('/children/:code',function(req,res,next){
+  Controllers.labour.getChildrenById({id_number:req.params.code},function(err,labour){
+    if(err){
+      console.log(err);
+      
+      res.status(500).json({
+        success:false,
+        err: err
+      })
+    }
+    else{
+      var result = labour.map(a => a.follower);
+      res.status(200).json({
+        success:true,
+        data:result[0]
       })
     }
   })
