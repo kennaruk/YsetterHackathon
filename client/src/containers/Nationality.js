@@ -6,8 +6,7 @@ import BodyClassName from "react-body-classname";
 import {
   withScriptjs,
   withGoogleMap,
-  GoogleMap,
-  Marker
+  GoogleMap
 } from "react-google-maps";
 import { compose, withProps } from "recompose";
 import HeatmapLayer from "react-google-maps/lib/components/visualization/HeatmapLayer";
