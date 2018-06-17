@@ -12,13 +12,16 @@ class ScanQrCode extends Component {
             result: 'No result',
         }
     }
+
     handleScan = (data) => {
         if(data) {
+            alert('อัพเดทข้อมูลแรงงานเรียบร้อย');
             this.setState({
                 result: data
             });
         }
     }
+
     render() {
         return (
             <BodyClassName className="Scan-body">

@@ -18,6 +18,7 @@ var labourSchema = new Schema({
       last_name: String,
       id_number: String,
       birth_date: Date,
+      gender: String,
       nationality: String,
       vaccine: [],
       education: {

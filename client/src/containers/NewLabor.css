@@ -266,6 +266,7 @@ select{
     text-align: center;
     position: relative;
     box-sizing: border-box;
+    
     width: 100%;
 }
 .search-box{
@@ -299,4 +300,66 @@ select{
     position: absolute;
     right: 6px;
     top: 8px;
+}
+
+.set-width-nextbtn{
+    width: calc(100% - 24px);
+    margin-left: 12px;
+}
+.info-head{
+    width: 50%;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    box-sizing: border-box;
+}
+.info-content{
+    font-size: 18px;
+    font-weight: normal;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.info-head2{
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    box-sizing: border-box;
+}
+.each-info{
+    width: 100%;
+    height: 44px;;
+    position: relative;
+    box-sizing: border-box;
+}
+.btn-content-box{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+.each-content-btn-info{
+    width: 45%;
+    height: 40px;
+    float: left;
+    position: relative;
+    /* border-radius: 6px; */
+    box-sizing: border-box;
+    background-color: #2E3340;
+    color: white;
+    font-size: 18px;
+}
+.margin-right{
+    margin-right: 10%;
+}
+.number-labor{
+    width: 10%;
+}
+.number-follow-each{
+    width: 30%;
 }

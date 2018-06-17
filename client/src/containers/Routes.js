@@ -17,6 +17,9 @@ import RegisterComplete from './RegisterComplete';
 import Overview from './Overview';
 import Nationality from './Nationality';
 import HeaderAdmin from './HeaderAdmin';
+import Info from './Info';
+import NewLabor4_new from './NewLabor4_new';
+import NewLabor5_new from './NewLabor5_new';
 
 class Routes extends Component {
     constructor(props) {
@@ -38,6 +41,8 @@ class Routes extends Component {
                         <Route path="/NewLabor2" exact component={NewLabor2}/>
                         <Route path="/NewLabor3" exact component={NewLabor3}/>
                         <Route path="/NewLabor4" exact component={NewLabor4}/>
+                        <Route path="/NewLabor4_new" exact component={NewLabor4_new}/>
+                        <Route path="/NewLabor5_new" exact component={NewLabor5_new}/>
                         <Route path="/NewLabor5" exact component={NewLabor5}/>
                         <Route path="/ListLabor" exact component={ListLabor}/>
                         <Route path="/ListFollower" exact component={ListFollower}/>
@@ -45,6 +50,7 @@ class Routes extends Component {
                         <Route path="/Overview" exact component={Overview}/>
                         <Route path="/Nationality" exact component={Nationality}/>
                         <Route path="/RegisterComplete" exact component={RegisterComplete}/>
+                        <Route path="/Info" exact component={Info} />
                         {/* <Route path="/labor" exact component={Labor}/> */}
                         {/* <Route path="/labor" exact component={Labor}/> */}
 
