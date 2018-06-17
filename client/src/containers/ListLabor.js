@@ -24,31 +24,37 @@ class NewLabor6 extends Component {
                         </div>
                         <table id="customers" className="customers2">
                             <tr>
+                                <th className="number-labor-each">ไอดี</th>
                                 <th>ชื่อแรงงาน</th>
-                                <th>จำนวนผู้้ติดตาม</th>
+                                <th className="number-follow-each">จำนวนผู้้ติดตาม</th>
                             </tr>
                             <tr>
+                                <td>1</td>
                                 <td>นิติพัฒน์ วุฒิศศิวัตน์
-                                <img className="img-profile" src={profile}/>
+                                <img className="img-profile" src={profile} />
                                 </td>
                                 <td>1</td>
                             </tr>
                             <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>1</td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile} /></td>
                                 <td>1</td>
                             </tr>
                             <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>1</td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile} /></td>
                                 <td>1</td>
                             </tr>
                             <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>1</td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile} /></td>
                                 <td>1</td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                            <td>1</td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile} /></td>
                                 <td>1</td>
                             </tr>
-                         
+
                         </table>
 
                         {/* // <div className="next-btn">

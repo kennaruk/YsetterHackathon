@@ -5,6 +5,11 @@ import homeheader from '../img/homeheader.svg';
 import registerheader from '../img/registerheader.svg';
 import listmember from '../img/listmember.svg';
 import follow from '../img/follower.svg';
+
+import homeheader2 from '../img/homeheader2.svg';
+import registerheader2 from '../img/registerheader2.svg';
+import listmember2 from '../img/listmember2.svg';
+import follow2 from '../img/follower2.svg';
 // import logout from '../img/logout.svg';
 
 
@@ -36,7 +41,7 @@ class Header extends Component {
                     <div className="navbar-container">
                         <div className="navbar-each">
                             <div className="img-each-navbar" onClick={() => { this.props.history.push('/') }}>
-                                <img className="img-navbar" src={homeheader} />
+                                <img className="img-navbar" src={homeheader2} />
                             </div>
                             <div className="text-each-navbar">
                                 ข้อมูลโครงการ

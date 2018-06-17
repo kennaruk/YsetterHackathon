@@ -6,6 +6,7 @@ import registerheader from '../img/registerheader.svg';
 import listmember from '../img/listmember.svg';
 import follow from '../img/follower.svg';
 import location from '../img/location.svg';
+import location2 from '../img/location2.svg';
 // import logout from '../img/logout.svg';
 
 
@@ -45,9 +46,9 @@ class Header extends Component {
                         </div>
                         <div className="navbar-each" onClick={() => { this.props.history.push('/Nationality') }}>
                             <div className="img-each-navbar">
-                                <img className="img-navbar" src={location} />
+                                <img className="img-navbar" src={location2} />
                             </div>
-                            <div className="text-each-navbar">
+                            <div className="text-each-navbar2">
                             แรงงานในแต่ละพื้นที่
                             </div>
                         </div>
