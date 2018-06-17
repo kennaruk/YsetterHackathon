@@ -32,7 +32,7 @@ router.get('/listLabour',function(req,res,next){
 });
 
 router.get('/children',function(req,res,next){
-  Controllers.labour.getChildren(function(err,labour){
+  Controllers.labour.getOnlyChildren(function(err,labour){
     if(err){
       res.status(500).json({
         success:false,
