@@ -4,6 +4,7 @@ body.home-body{
     padding:0px;
     width:100%;
     height: 100%;
+    padding-top: 160px;
     background: url("../img/bgcontent.png"); 
     background-size:     cover;                   
     background-repeat:   no-repeat;
@@ -54,6 +55,21 @@ body.home-body{
 }
 .graph-box{
     width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+.graph-box4{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin-bottom: 24px;
+    margin-top: 6px;
+}
+.graph-box3{
+    width: calc(100% + 48px);
+    margin-left: -24px;
     position: relative;
     box-sizing: border-box;
     background-color: transparent;

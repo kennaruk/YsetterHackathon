@@ -8,6 +8,8 @@ import follow from '../img/follower.svg';
 import location from '../img/location.svg';
 import location2 from '../img/location2.svg';
 import homeheader2 from '../img/homeheader2.svg';
+import messenger from '../img/messenger.svg';
+import messenger2 from '../img/messenger2.svg';
 import follow2 from '../img/follower2.svg';
 import listmember2 from '../img/listmember2.svg';
 // import logout from '../img/logout.svg';
@@ -40,7 +42,7 @@ class Header extends Component {
             <div className="header-main-box">
                 <div className="header-logo" >
                     <img className="img-logo-header" src={logo2} />
-
+                <div className="register-supplier">สมัคร</div>
                     <div className="right-content-box">
                         <div className="logout-text" onClick={this.handleLogout}> ลงชื่อออก </div>
                         <div className="username-text"> {this.props.name}  </div>
@@ -50,10 +52,10 @@ class Header extends Component {
                     <div className="navbar-container">
                         <div className="navbar-each">
                             <div className="img-each-navbar" onClick={() => { this.handleChangeTab(1); this.props.history.push('/Overview') }}>
-                                <img className="img-navbar" src={this.state.tab == 1 ? homeheader2 : homeheader} />
+                                <img className="img-navbar set-width-only" src={this.state.tab == 1 ? messenger2 : messenger} />
                             </div>
                             <div className={this.state.tab == 1 ? "text-each-navbar2" : "text-each-navbar"}>
-                            ภาพรวมโครงการ
+                          สถานะการส่งทะเบียน
                             </div>
                         </div>
                         <div className="navbar-each" onClick={() => { this.handleChangeTab(2); this.props.history.push('/Nationality') }}>

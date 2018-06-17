@@ -4,6 +4,7 @@ body.newlabor-body{
     position: relative;
     padding: 0px;
     margin: 0px;
+    padding-top: 160px;
     box-sizing: border-box;
     background: url("../img/bgcontent.png"); 
     background-size:     cover;                      /* <------ */

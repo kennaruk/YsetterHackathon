@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "./Nationality.css";
 import imgproject from "../img/imgproject.png";
 import BodyClassName from "react-body-classname";
+import { Doughnut } from "react-chartjs-2";
+
 import {
   withScriptjs,
   withGoogleMap,
@@ -27,6 +29,23 @@ const MyMapComponent = compose(
   </GoogleMap>
 ));
 
+var isOpen = [];
+var data = {
+  labels: ["ไทย", "ลาว", "พม่า", "กัมพูชา"],
+  datasets: [
+    {
+      label: "My First dataset",
+      backgroundColor: [
+        "rgb(158,203,243)",
+        "rgb(128,143,203)",
+        "rgb(204,162,246)",
+        "rgb(46,51,64)"
+      ],
+      borderColor: "rgb(122,122,122)",
+      data: [15, 10, 5, 2]
+    }
+  ]
+};
 function getPoints() {
   return [
         new google.maps.LatLng(14.644, 104.234),
@@ -387,6 +406,13 @@ class Nationality extends Component {
     return (
       <BodyClassName className="home-body">
         <div>
+        <div className="text-name-project">
+        สัดส่วนสัญชาติต่อปี (%)
+          </div>
+     
+            <div className="graph-box4">
+              <Doughnut data={data} height={500} width={700} />
+            </div>
           <div className="text-name-project">
             สัญชาติของแรงงานในแต่ละพื้นที่
           </div>
