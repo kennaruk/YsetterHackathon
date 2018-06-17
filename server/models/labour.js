@@ -7,6 +7,7 @@ var labourSchema = new Schema({
   phone_number: String,
   id_number: String,
   nationality: String,
+  gender: String,
   type: String,
   follower: [
     {
@@ -17,7 +18,7 @@ var labourSchema = new Schema({
       first_name: String,
       last_name: String,
       id_number: String,
-      birth_date: Date,
+      birth_date: String,
       gender: String,
       nationality: String,
       vaccine: [],
