@@ -7,40 +7,52 @@ import BodyClassName from 'react-body-classname';
 class Info extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            first_name: 'บุทิตา',
+            last_name: 'ม่วงทอง',
+            id_number: '456635',
+            gender: 'ชาย',
+            birth_date: '26/07/97',
+            age: '20',
+            nationality: 'ไทย',
+            wasInSchool: 'เคย',
+            grade: 'ป.4',
+            wasVaccine: 'เคย'
+        }
     }
     render() {
         return (
             <BodyClassName className="newlabor-body">
                 <div>
                     <div className="registerlabor-text">
-                    ข้อมูลส่วนตัวผู้ติดตาม
+                    ข้อมูลส่วนตัวผู้ติดตาม {this.props.match.params.id}
                      </div>
 
                     <div className="register-box">
                          <div className="each-info">
-                            <div className="info-head">ชื่อ: <span className="info-content">บุษฑิตา</span></div>
-                            <div className="info-head">นามสกุล: <span className="info-content">ม่วงทอง</span></div>
+                            <div className="info-head">ชื่อ: <span className="info-content">{this.state.first_name}</span></div>
+                            <div className="info-head">นามสกุล: <span className="info-content">{this.state.last_name}</span></div>
                          </div>
                          <div className="each-info">
-                            <div className="info-head">เลขประจำตัว: <span className="info-content">435439549</span></div>
-                            <div className="info-head">เพศ: <span className="info-content">หญิง</span></div>
+                            <div className="info-head">เลขประจำตัว: <span className="info-content">{this.state.id_number}</span></div>
+                            <div className="info-head">เพศ: <span className="info-content">{this.state.gender}</span></div>
                          </div>
                         <div className="each-info">
-                            <div className="info-head">วันเดือนปีเกิด: <span className="info-content">ไทย</span></div>
-                            <div className="info-head">อายุ: <span className="info-content">12</span></div>
+                            <div className="info-head">วันเดือนปีเกิด: <span className="info-content">{this.state.birth_date}</span></div>
+                            <div className="info-head">อายุ: <span className="info-content">{this.state.age}</span></div>
                          </div>
                          <div className="each-info">
-                            <div className="info-head2">สัญชาติ: <span className="info-content">ไทย</span></div>
+                            <div className="info-head2">สัญชาติ: <span className="info-content">{this.state.nationality}</span></div>
                            
                          </div>
                          <div className="each-info">
-                            <div className="info-head2">เคยเข้าโรงเรียนของไทยหรือไม่: <span className="info-content">เคย/ไม่เคย</span></div>
+                            <div className="info-head2">เคยเข้าโรงเรียนของไทยหรือไม่: <span className="info-content">{this.state.wasInSchool}</span></div>
                           </div>
                          <div className="each-info">
-                                <div className="info-head2">ระดับชั้น: <span className="info-content">ป.4</span></div>
+                                <div className="info-head2">ระดับชั้น: <span className="info-content">{this.state.grade}</span></div>
                         </div>
                           <div className="each-info">
-                             <div className="info-head2">เคยรับวัคซีนระหว่าง 0-4 ปีหรือไม่: <span className="info-content">เคย/ไม่เคย</span></div>
+                             <div className="info-head2">เคยรับวัคซีนระหว่าง 0-4 ปีหรือไม่: <span className="info-content">{this.state.wasVaccine}</span></div>
                             </div>
 
                         <div className="btn-content-box">

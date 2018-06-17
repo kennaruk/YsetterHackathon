@@ -8,6 +8,7 @@ var labourSchema = new Schema({
   id_number: String,
   nationality: String,
   type: String,
+  gender: String,
   follower: [
     {
       status: {

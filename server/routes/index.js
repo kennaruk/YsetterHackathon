@@ -36,10 +36,16 @@ router.get('/listLabour',function(req,res,next){
       })
     }
     else{
-      var result = {};
-      result.name = labour.first_name+" "+labour.last_name;
-      result.id = labour.id_number;
-      result.follower = labour.follower.lenght();
+      var result = [];
+      labour.forEach(labor => {
+        let obj = {
+          name: labor.first_name+" "+labor.last_name,
+          id: labor.id_number,
+          follower: labor.follower.length
+        }
+        result.push(obj);
+      });
+      
       res.status(200).json({
         success:true,
         data: result

@@ -9,36 +9,45 @@ class NewLabor6 extends Component {
         super(props);
         this.state = {
             labors: [
-                {
-                    id: '552872',
-                    name: 'อัชราภา สิ่งท้อ',
-                    follower: 2
-                },
-                {
-                    id: '557877',
-                    name: 'ศรีชาย ม่วงมัน',
-                    follower: 1
-                },
-                {
-                    id: '557850',
-                    name: 'แก้วตา ขวัญใจ',
-                    follower: 0
-                },
-                {
-                    id: '573937',
-                    name: 'สมัครใจ ทำงาน',
-                    follower: 1
-                },
-                {
-                    id: '458799',
-                    name: 'มฤตวงศ์ สมสมร',
-                    follower: 1
-                }
+                // {
+                //     id: '552872',
+                //     name: 'อัชราภา สิ่งท้อ',
+                //     follower: 2
+                // },
+                // {
+                //     id: '557877',
+                //     name: 'ศรีชาย ม่วงมัน',
+                //     follower: 1
+                // },
+                // {
+                //     id: '557850',
+                //     name: 'แก้วตา ขวัญใจ',
+                //     follower: 0
+                // },
+                // {
+                //     id: '573937',
+                //     name: 'สมัครใจ ทำงาน',
+                //     follower: 1
+                // },
+                // {
+                //     id: '458799',
+                //     name: 'มฤตวงศ์ สมสมร',
+                //     follower: 1
+                // }
             ],
             search: ''
         }
     }
 
+    componentDidMount() {
+        fetch('/listLabour').then(res => res.json())
+        .then(res => {
+            this.setState({
+                labors: res.data
+            });
+        });
+    }
+    
     handleChange = (event) => {
         this.setState({
             [event.target.id]: event.target.value
@@ -71,7 +80,7 @@ class NewLabor6 extends Component {
                                     <tr>
                                         <td>{labor.id}</td>
                                         <td>    {labor.name}
-                                            <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/>
+                                            <img className="img-profile" onClick={ () => {this.props.history.push('/Info/'+labor.id)} } src={profile}/>
                                         </td>
                                         <td>{labor.follower}</td>
                                     </tr>

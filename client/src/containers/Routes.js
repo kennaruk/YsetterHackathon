@@ -50,7 +50,8 @@ class Routes extends Component {
                         <Route path="/Overview" exact component={Overview}/>
                         <Route path="/Nationality" exact component={Nationality}/>
                         <Route path="/RegisterComplete" exact component={RegisterComplete}/>
-                        <Route path="/Info" exact component={Info} />
+                        {/* <Route path="/Info" exact component={Info} /> */}
+                        <Route path="/Info/:id"  component={Info} />
                         {/* <Route path="/labor" exact component={Labor}/> */}
                         {/* <Route path="/labor" exact component={Labor}/> */}
 
