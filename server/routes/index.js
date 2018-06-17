@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/labour',function(req,res,next){
-  Controller.labour.getLabour({},function(err,labour){
+  Controllers.labour.getLabour({},function(err,labour){
     if(err){
       res.status(500).json({
         success:false,
@@ -27,8 +27,29 @@ router.get('/labour',function(req,res,next){
   })
 });
 
+router.get('/listLabour',function(req,res,next){
+  Controllers.labour.getLabour({},function(err,labour){
+    if(err){
+      res.status(500).json({
+        success:false,
+        err: err
+      })
+    }
+    else{
+      var result = {};
+      result.name = labour.first_name+" "+labour.last_name;
+      result.id = labour.id_number;
+      result.follower = labour.follower.lenght();
+      res.status(200).json({
+        success:true,
+        data: result
+      })
+    }
+  })
+});
+
 router.get('/children',function(req,res,next){
-  Controller.labour.getChildren(function(err,labour){
+  Controllers.labour.getChildren(function(err,labour){
     if(err){
       res.status(500).json({
         success:false,
@@ -45,7 +66,7 @@ router.get('/children',function(req,res,next){
 });
 
 router.get('/labour',function(req,res,next){
-  Controller.labour.getLabour({},function(err,labour){
+  Controllers.labour.getLabour({},function(err,labour){
     if(err){
       res.status(500).json({
         success:false,
@@ -61,8 +82,8 @@ router.get('/labour',function(req,res,next){
   })
 });
 
-router.get('/labour/:code',function(req,res,next){
-  Controller.labour.getLabour({id_number:req.params.code},function(err,labour){
+router.get('/info/:code',function(req,res,next){
+  Controllers.labour.getLabour({id_number:req.params.code},function(err,labour){
     if(err){
       res.status(500).json({
         success:false,
@@ -70,6 +91,8 @@ router.get('/labour/:code',function(req,res,next){
       })
     }
     else{
+      result={};
+      labour.age = parseInt(labour.birthdate.split('/')[0])-parseInt((new Date()).getFullYear())
       res.status(200).json({
         success:true,
         data:labour
@@ -79,7 +102,7 @@ router.get('/labour/:code',function(req,res,next){
 });
 
 router.post('/labour',function(req, res, next){
-  Controller.labour.createLabour(req.body,function(err,labour){
+  Controllers.labour.createLabour(req.body,function(err,labour){
     if(err)
       res.status(500).json({
         success:false,
