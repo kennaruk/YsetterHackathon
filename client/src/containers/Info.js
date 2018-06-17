@@ -44,12 +44,12 @@ class Info extends Component {
                             </div>
 
                         <div className="btn-content-box">
-                            <div className="each-content-btn-info margin-right"><span className="set-center">ประวัติวัคซีน</span> </div>
-                            <div className="each-content-btn-info"><span className="set-center">ประวัติการศึกษา</span> </div>
+                            <div className="each-content-btn-info margin-right" onClick={ () => {this.props.history.push('/NewLabor4_new')} } ><span className="set-center">ประวัติวัคซีน</span> </div>
+                            <div className="each-content-btn-info"><span className="set-center" onClick={ () => {this.props.history.push('/NewLabor5_new')} } >ประวัติการศึกษา</span> </div>
                         </div>
 
                        
-                        <div className="next-btn">
+                        <div className="next-btn" onClick={ () => {this.props.history.goBack()} }>
                             <span className="set-center">กลับ</span>
                         </div>
                     </div>

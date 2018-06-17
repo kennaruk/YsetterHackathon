@@ -3,6 +3,7 @@ import './ScanQrCode.css'
 import BodyClassName from 'react-body-classname';
 import search from '../img/search.svg';
 import QrReader from 'react-qr-reader';
+import { withAlert } from 'react-alert';
 
 class ScanQrCode extends Component {
     constructor(props) {
@@ -12,13 +13,16 @@ class ScanQrCode extends Component {
             result: 'No result',
         }
     }
+
     handleScan = (data) => {
         if(data) {
+            alert('อัพเดทข้อมูลแรงงานเรียบร้อย');
             this.setState({
                 result: data
             });
         }
     }
+
     render() {
         return (
             <BodyClassName className="Scan-body">
@@ -41,5 +45,5 @@ class ScanQrCode extends Component {
         )
     }
 }
-export default ScanQrCode;
+export default withAlert(ScanQrCode);
 

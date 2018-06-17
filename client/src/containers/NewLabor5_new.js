@@ -61,7 +61,7 @@ class NewLabor5_new extends Component {
 
 
                         </table>
-                        <div className="next-btn">
+                        <div className="next-btn" onClick={ () => {this.props.history.goBack()} }>
                             <span className="set-center">กลับ</span>
                         </div>
                     </div>

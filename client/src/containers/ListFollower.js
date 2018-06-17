@@ -26,35 +26,35 @@ class NewLabor6 extends Component {
                           
                             <tr>
                                 <td>นิติพัฒน์ วุฒิศศิวัตน์
-                                <img className="img-profile" src={profile}/>
+                                <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr>
                             <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr>
                             <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr> <tr>
-                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" src={profile}/></td>
+                                <td>นิติพัฒน์ วุฒิศศิวัตน์  <img className="img-profile" onClick={ () => {this.props.history.push('/Info')} } src={profile}/></td>
                             </tr>
                          
                         </table>

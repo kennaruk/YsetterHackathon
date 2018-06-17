@@ -96,7 +96,7 @@ class NewLabor4_new extends Component {
                         </div></div>
 
 
-                    <div className="next-btn set-width-nextbtn">
+                    <div className="next-btn set-width-nextbtn" onClick={ () => {this.props.history.goBack()} }>
                         <span className="set-center">กลับ</span>
                     </div>
                 </div>
