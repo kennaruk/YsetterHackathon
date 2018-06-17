@@ -112,8 +112,9 @@ class NewLabor4 extends Component {
                         </div>
                     </div>
 
-
-
+                    <div className="next-btn set-width-nextbtn" onClick={this.props.nextStep}>
+                        <span className="set-center">ถัดไป</span>
+                    </div>
                 </div>
 
 
