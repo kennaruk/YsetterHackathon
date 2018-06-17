@@ -14,7 +14,9 @@ class Overview extends Component {
 
                     <div className="detail-box">
                         <div className="detail-head-text">สัดส่วนสัญชาติต่อปี (%)</div>
-                        <div className="graph-box"></div>
+                        <div className="graph-box">
+                        
+                        </div>
                         <div className="detail-head-text">สถานะการส่งทะเบียนแต่ละโครงการ</div>
                         <div className="graph-box"></div>
 
