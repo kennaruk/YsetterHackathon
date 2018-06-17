@@ -41,8 +41,9 @@ class Login extends Component {
         }).then(res => res.json())
         .then(res => {
             if(res.success) {
-                sessionStorage.setItem('name', res.data.th_first_name+" "+res.data.th_last_name);
-                this.props.hasAuthenticated(true);
+                console.log('res.data:', res.data);
+                
+                this.props.hasAuthenticated(true, res.data.th_first_name+" "+res.data.th_last_name, res.data.role);
             }
             else
                 this.setState({

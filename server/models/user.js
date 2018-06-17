@@ -8,11 +8,7 @@ var userSchema = new Schema({
   en_first_name: String,
   th_last_name: String,
   en_last_name: String,
-  role:{
-      type: String,
-      enum : ['PM','SC','TC'],
-      default: 'PM'
-  }
+  role: String
 });
 
 const User = mongoose.model('User',userSchema);

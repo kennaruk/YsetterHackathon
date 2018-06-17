@@ -9,26 +9,36 @@ class App extends Component {
     super();
     this.state = {
       isAuthenticated: true,
-      name: ''
+      name: '',
+      role: ''
     }
   }
 
   componentDidMount() {
-    const authenticated = sessionStorage.getItem('authenticated');
+    var authenticated = localStorage.getItem('authenticated');
+    var role = localStorage.getItem('role');
+    var name = localStorage.getItem('name');
     this.setState({ 
-      isAuthenticated: authenticated
+      isAuthenticated: authenticated,
+      role: role,
+      name: name
     });
   }
 
-  hasAuthenticated = (authenticated) => {
+  hasAuthenticated = (authenticated, name, role) => {
     if(authenticated) {
-      sessionStorage.setItem('authenticated', authenticated);
+      localStorage.setItem('authenticated', authenticated);
+      localStorage.setItem('name', name);
+      localStorage.setItem('role', role);
     } else {
-      sessionStorage.removeItem('authenticated')
+      localStorage.removeItem('authenticated')
+      localStorage.removeItem('name')
+      localStorage.removeItem('role')
     }
     this.setState({
       isAuthenticated: authenticated,
-      name: sessionStorage.getItem('name')
+      name: localStorage.getItem('name'),
+      role: localStorage.getItem('role')
     })
   };
 
@@ -36,9 +46,10 @@ class App extends Component {
     const childProps = {
       isAuthenticated: this.state.isAuthenticated,
       hasAuthenticated: this.hasAuthenticated,
-      name: this.state.name
+      name: this.state.name,
+      role: this.state.role
     }
-
+    {console.log('childProps:', childProps);}
     return (
       <div className="App">
         {this.state.isAuthenticated ? 

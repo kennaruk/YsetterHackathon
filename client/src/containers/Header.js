@@ -51,7 +51,7 @@ class Header extends Component {
     พนักงาน
                             </div>
                         </div>
-                        <div className="navbar-each">
+                        <div className="navbar-each" onClick={() => { this.props.history.push('/ListLabor') }}>
                             <div className="img-each-navbar">
                                 <img className="img-navbar" src={listmember} />
                             </div>
@@ -59,7 +59,7 @@ class Header extends Component {
                                 ข้อมูลพนักงานทั้งหมด
                             </div>
                         </div>
-                        <div className="navbar-each">
+                        <div className="navbar-each" onClick={() => { this.props.history.push('/ListFollower') }}>
                             <div className="img-each-navbar">
                                 <img className="img-navbar" src={follow} />
                             </div>

@@ -36,14 +36,14 @@ class Header extends Component {
                 <div className="navbar-box">
                     <div className="navbar-container">
                         <div className="navbar-each">
-                            <div className="img-each-navbar" onClick={() => { this.props.history.push('/') }}>
+                            <div className="img-each-navbar" onClick={() => { this.props.history.push('/Overview') }}>
                                 <img className="img-navbar" src={homeheader} />
                             </div>
                             <div className="text-each-navbar">
                             ภาพรวมโครงการ
                             </div>
                         </div>
-                        <div className="navbar-each" onClick={() => { this.props.history.push('/laborRegisterLanding') }}>
+                        <div className="navbar-each" onClick={() => { this.props.history.push('/Nationality') }}>
                             <div className="img-each-navbar">
                                 <img className="img-navbar" src={location} />
                             </div>
@@ -51,7 +51,7 @@ class Header extends Component {
                             แรงงานในแต่ละพื้นที่
                             </div>
                         </div>
-                        <div className="navbar-each">
+                        <div className="navbar-each" onClick={() => { this.props.history.push('/ListLabor') }}>
                             <div className="img-each-navbar">
                                 <img className="img-navbar" src={listmember} />
                             </div>
@@ -59,7 +59,7 @@ class Header extends Component {
                             ข้อมูลพนักงานทั้งหมด
                             </div>
                         </div>
-                        <div className="navbar-each">
+                        <div className="navbar-each" onClick={() => { this.props.history.push('/ListFollower') }}>
                             <div className="img-each-navbar">
                                 <img className="img-navbar" src={follow} />
                             </div>
