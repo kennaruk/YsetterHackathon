@@ -47,7 +47,7 @@ Built with MERN
 
 [Video Demo](https://youtu.be/5M6hgEBx5iQ)
 
-### Screenshots
+### Example Screenshots
 ![ss1](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img2.png)
-![ss2](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img3.png)
-![ss3](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img1.png)
+![ss2](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img1.png)
+![ss3](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img3.png)
