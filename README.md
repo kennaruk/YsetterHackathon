@@ -3,7 +3,7 @@ Ysetter Hackathon 2 (Good Space by Sansiri)
 
 Introduction
 ---
-This is our Hackathon project at YSetterReaility Hackathon2 (1 night) event which was held on June 16, 2018 - June 18, 2018 in subject of Good Space by Sansiri
+This is our Hackathon project at YSetterReaility Hackathon2 (1 night) event which was held on June 16, 2018 - June 17, 2018 in subject of Good Space by Sansiri
 
 Getting Started
 ---
@@ -36,6 +36,15 @@ First, run this command
 ```
 npm install
 ```
+
+***In case, you got error from 'npm install' follow these steps manually (Most error on Windows)***
+```
+cd client
+npm install
+cd ../server
+npm install
+```
+
 Then, run this command
 ```
 npm start
