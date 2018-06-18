@@ -21,3 +21,9 @@ body.Scan-body{
     box-sizing: border-box;
     background-color: red;
 }
+.result-qrcode{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
