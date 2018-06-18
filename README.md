@@ -22,17 +22,21 @@ sudo npm -g install concurrently
 
 ### Running project
 
-Just clone this project and cd to them
+Just clone this project, cd to them and follow these commands
 ```
 git clone https://github.com/kennaruk/YsetterHackathon.git
 
-cd path/to/YsetterHackathon
+cd <...path/to/.../>YsetterHackathon
 ```
-and then run this command
+First, run this command
+```
+npm install
+```
+Then, run this command
 ```
 npm start
 ```
-*Project will run on port 3000 so visit localhost:3000 on your browser*
+*Project will run on port 3000 so visit **localhost:3000** on your browser*
 
 Built with MERN
 ---
@@ -41,4 +45,9 @@ Built with MERN
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 
-![DemoVideo](/readme_imgs/demo.mp4)
+[Video Demo](https://youtu.be/5M6hgEBx5iQ)
+
+### Screenshots
+![img1](/readme_imgs/img1)
+![img2](/readme_imgs/img2)
+![img3](/readme_imgs/img3)
