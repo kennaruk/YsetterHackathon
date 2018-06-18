@@ -40,3 +40,5 @@ Built with MERN
 * [Express.js](https://expressjs.com/)
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
+
+![DemoVideo](/readme_imgs/demo.mp4)
