@@ -38,6 +38,20 @@ npm start
 ```
 *Project will run on port 3000 so visit **localhost:3000** on your browser*
 
+Landing page will require login so our project split into 2 roles with following user & password
+
+**Project manager role**
+```
+username: projectmanager
+password: password
+```
+
+**Supplier contact role**
+```
+username: suppliercontact
+password: password
+```
+
 Built with MERN
 ---
 * [MongoDB](https://www.mongodb.com/)
