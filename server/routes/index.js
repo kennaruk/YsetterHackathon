@@ -133,6 +133,7 @@ router.get('/info/:code',function(req,res,next){
       else
       result.wasInSchool="ไม่เคย"
       result.grade = follower.education_current
+      result.vaccine = "เคย"
       result.age = parseInt(parseInt((new Date()).getFullYear()-follower.birth_date.split('/')[2])+543)
       console.log(result.age);
       res.status(200).json({
