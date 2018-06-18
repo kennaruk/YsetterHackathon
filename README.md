@@ -3,7 +3,7 @@ Ysetter Hackathon 2 (Good Space by Sansiri)
 
 Introduction
 ---
-This is our Hackathon project at YSetterReaility Hackathon2 (1 night) event which was held on June 16, 2018 - June 17, 2018 in subject of Good Space by Sansiri
+This is our Hackathon project at YSetterReaility Hackathon2 (1 night) event which was held on June 16, 2018 - June 17, 2018 in subject of Good Space by Sansiri at 3DS Interactive, Bangkok, Thailand and we got **1st Winner Prize!!**.
 
 Getting Started
 ---
@@ -65,6 +65,8 @@ password: password
 username: suppliercontact
 password: password
 ```
+
+Enjoy!
 
 Built with MERN
 ---
