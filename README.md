@@ -48,6 +48,6 @@ Built with MERN
 [Video Demo](https://youtu.be/5M6hgEBx5iQ)
 
 ### Screenshots
-![img1](/readme_imgs/img1)
-![img2](/readme_imgs/img2)
-![img3](/readme_imgs/img3)
+![ss1](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img2.png)
+![ss2](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img3.png)
+![ss3](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img1.png)
