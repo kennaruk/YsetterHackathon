@@ -45,7 +45,9 @@ Built with MERN
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 
-[Video Demo](https://youtu.be/5M6hgEBx5iQ)
+### Demo Video
+
+[Visit this link](https://youtu.be/5M6hgEBx5iQ)
 
 ### Example Screenshots
 ![ss1](https://github.com/kennaruk/YsetterHackathon/blob/master/readme_imgs/img2.png)
